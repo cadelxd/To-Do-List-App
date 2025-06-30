@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+
+<h3>Login</h3>
+
+{% if messages %}
+    {% for message in messages %}
+        <p style="color: #ff5252;">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+<form method="post" style="max-width: 400px;">
+    {% csrf_token %}
+    
+    <label for="username">Username:</label><br>
+    <input type="text" name="username" id="username" required
+        style="width: 100%; padding: 10px; margin-bottom: 15px; background-color: #2a2a2a; color: #fff; border: 1px solid #444; border-radius: 4px;"><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" name="password" id="password" required
+        style="width: 100%; padding: 10px; margin-bottom: 15px; background-color: #2a2a2a; color: #fff; border: 1px solid #444; border-radius: 4px;"><br>
+
+    <button type="submit" style="padding: 10px 15px; background-color: #1976d2; color: white; border: none; border-radius: 4px; cursor: pointer;">Login</button>
+</form>
+
+<p style="margin-top: 20px;">Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+
+{% endblock %}
