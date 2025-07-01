@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+static/
+
+# VS Code
+.vscode/
+
+# macOS/Linux/Windows system files
+.DS_Store
+Thumbs.db
+
+# Env variables
+.env
+.env.*
+
+# Migrations (optional if you don’t want to version-control them)
+**/migrations/__pycache__/
+**/migrations/*.pyc
+# Uncomment below line only if you DON’T want to track migration history
+# **/migrations/*.py
+
+# Node/npm stuff (if frontend is included)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Render deploy-specific
+render.yaml
